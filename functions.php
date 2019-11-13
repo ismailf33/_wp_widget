@@ -13,10 +13,50 @@
 
 
 //==============It has 4 steps=============
-//function __construct()        
+//function __construct()    
+
+
 //public function form( $instance )
+// $instance    This parameter return an array of all name  i.e $instance['title']
+//['title']     When id is title . Then we have a advance faeture
+
+
+
+
+
+
+
 //public function update( $new_instance, $old_instance )
+
+
+
+
+
+
+
+
+
 //public function widget( $args, $instance )
+//$args(first-parameter) retrive value from widget
+//$instance(second-parameter) retrive value from database
+
+
+
+
+
+
+
+//==========================$this->get_field_name( '' ) 
+//It is used for return data to database         
+//Generate unique name for specific input field
+
+
+
+
+
+//==========================$this->get_field_id( '' )  
+//It is used for connected to level         
+//Generate unique id for specific input field
 
 
 
