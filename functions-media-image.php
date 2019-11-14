@@ -59,6 +59,43 @@ class Fat_Widget extends WP_Widget {
  }
 
 
+
+
+
+ /**
+  * Sanitize widget form values as they are saved.
+  *
+  * @see WP_Widget::update()
+  *
+  * @param array $new_instance Values just sent to be saved.
+  * @param array $old_instance Previously saved values from database.
+  *
+  * @return array Updated safe values to be saved.
+  */
+ public function update( $new_instance, $old_instance ) {
+     $instance = array();
+     $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+     $instance['description'] = ( ! empty( $new_instance['description'] ) ) ? sanitize_text_field( $new_instance['description'] ) : '';
+     $instance['info_image'] = ( ! empty( $new_instance['info_image'] ) ) ? sanitize_text_field( $new_instance['info_image'] ) : '';
+
+     return $instance;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /**
   * Front-end display of widget.
   *
@@ -85,24 +122,8 @@ class Fat_Widget extends WP_Widget {
 
 
 
- /**
-  * Sanitize widget form values as they are saved.
-  *
-  * @see WP_Widget::update()
-  *
-  * @param array $new_instance Values just sent to be saved.
-  * @param array $old_instance Previously saved values from database.
-  *
-  * @return array Updated safe values to be saved.
-  */
- public function update( $new_instance, $old_instance ) {
-     $instance = array();
-     $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
-     $instance['description'] = ( ! empty( $new_instance['description'] ) ) ? sanitize_text_field( $new_instance['description'] ) : '';
-     $instance['info_image'] = ( ! empty( $new_instance['info_image'] ) ) ? sanitize_text_field( $new_instance['info_image'] ) : '';
 
-     return $instance;
- }
+
 
 } // class Foo_Widget
 
