@@ -46,22 +46,14 @@ class Fat_Widget extends WP_Widget {
 
 
 
-
-
-
-
-  <!--   image uplodaer creating  -->
-  <p>  
-  <button class="button button-primary"   id="author_image">Image upload</button>
-  <input type="hidden" class="image_er_link" name="<?php echo esc_attr( $this->get_field_name( 'info_image' ) ); ?>">
-  <div class="image-show">
-    <img width="300px" height="auto" src="<?php echo $instance['info_image']?>" alt="">
-  </div>
-  </p>
-
-
-
-
+		  <!--   image uplodaer creating  -->
+		  <p>  
+		  <button class="button button-primary"   id="author_image">Image upload</button>
+		  <input type="hidden" class="image_er_link" name="<?php echo esc_attr( $this->get_field_name( 'info_image' ) ); ?>">
+		  <div class="image-show">
+		    <img width="300px" height="auto" src="<?php echo $instance['info_image']?>" alt="">
+		  </div>
+		  </p>
 
    <?php 
  }
