@@ -201,6 +201,58 @@ add_action( 'widgets_init', 'register_foo_widget' );
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function wp_car_widgets(){
   register_sidebar(array(
     'name'          =>  esc_html__( 'Header widget', '@$&text_domain' ),
